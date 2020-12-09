@@ -18,7 +18,7 @@ class LoadRouteFileTest extends TestCase
 		$gpx = new phpGpx();
 		$gpxFile = $gpx->load($file);
 
-		$this->assertEquals($this->createExpectedArray(), $gpxFile->toArray(), "", 0.1);
+		$this->assertEqualsWithDelta($this->createExpectedArray(), $gpxFile->toArray(), 0.1);
 
 		// Check XML generation
 		$gpxFile->toXML()->saveXML();
@@ -34,7 +34,6 @@ class LoadRouteFileTest extends TestCase
 		$gpxFile = $gpx->load($file);
 
 		$this->assertEquals(6, $gpxFile->tracks[0]->stats->cumulativeElevationGain);
-
 
 		// this should give a higher number for the elevation
 		$gpx::$APPLY_ELEVATION_SMOOTHING = false;

@@ -1,6 +1,6 @@
 <?php
 
-namespace UnitTests\phpGPX\Parsers;
+namespace phpGPX\Tests\Parsers;
 
 use phpGPX\Models\Extensions;
 use phpGPX\Models\Extensions\TrackPointExtension;
@@ -33,7 +33,7 @@ class ExtensionParserTest extends AbstractParserTest
 		return $extensions;
 	}
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		parent::setUp();
 

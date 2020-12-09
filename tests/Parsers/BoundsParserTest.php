@@ -3,7 +3,7 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace UnitTests\phpGPX\Parsers;
+namespace phpGPX\Tests\Parsers;
 
 use phpGPX\Models\Bounds;
 use phpGPX\Parsers\BoundsParser;
@@ -30,7 +30,7 @@ class BoundsParserTest extends AbstractParserTest
 		return $bounds;
 	}
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		parent::setUp();
 

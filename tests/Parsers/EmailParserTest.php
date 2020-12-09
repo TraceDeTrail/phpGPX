@@ -3,7 +3,7 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace UnitTests\phpGPX\Parsers;
+namespace phpGPX\Tests\Parsers;
 
 use phpGPX\Models\Email;
 use phpGPX\Parsers\EmailParser;
@@ -18,7 +18,7 @@ class EmailParserTest extends AbstractParserTest
 	 */
 	protected $testModelInstance;
 
-	public static function createTestInstance()
+	public static function createTestInstance(): Email
 	{
 		$email = new Email();
 
@@ -28,7 +28,7 @@ class EmailParserTest extends AbstractParserTest
 		return $email;
 	}
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		parent::setUp();
 
@@ -54,7 +54,7 @@ class EmailParserTest extends AbstractParserTest
 	 * @param \DOMDocument $document
 	 * @return \DOMElement
 	 */
-	protected function convertToXML(\DOMDocument $document)
+	protected function convertToXML(\DOMDocument $document): \DOMElement
 	{
 		return EmailParser::toXML($this->testModelInstance, $document);
 	}

@@ -3,7 +3,7 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace UnitTests\phpGPX\Parsers;
+namespace phpGPX\Tests\Parsers;
 
 use phpGPX\Models\Summarizable;
 use PHPUnit\Framework\TestCase;
@@ -36,7 +36,7 @@ abstract class AbstractParserTest extends TestCase
 	 */
 	protected $testParserClass;
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		$reflection = new \ReflectionClass($this->testParserClass);
 

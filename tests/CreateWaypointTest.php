@@ -1,5 +1,7 @@
 <?php
 
+namespace phpGPX\Tests;
+
 use PHPUnit\Framework\TestCase;
 
 use phpGPX\phpGPX;
@@ -7,10 +9,9 @@ use phpGPX\Models\GpxFile;
 use phpGPX\Models\Link;
 use phpGPX\Models\Metadata;
 use phpGPX\Models\Point;
-use phpGPX\Models\Segment;
 use phpGPX\Models\Track;
 
-final class CreateWaypointTest extends TestCase
+class CreateWaypointTest extends TestCase
 {
 	public function createWaypointFile()
 	{
@@ -91,7 +92,7 @@ final class CreateWaypointTest extends TestCase
 		$gpx_file->save($this->waypoint_created_file, \phpGPX\phpGPX::XML_FORMAT);
 	}
 
-	public function setUp()
+	public function setUp(): void
 	{
 		$this->waypoint_created_file = dirname(__FILE__)."/waypoint_test.gpx";
 		$this->waypoint_saved_file = dirname(__FILE__).'/output_waypoint_test.gpx';
@@ -100,7 +101,7 @@ final class CreateWaypointTest extends TestCase
 		// now create the test file
 		$this->createWaypointFile();
 	}
-	public function tearDown()
+	public function tearDown(): void
 	{
 		system("rm -f {$this->waypoint_created_file}");
 		system("rm -f {$this->waypoint_saved_file}");

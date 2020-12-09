@@ -3,7 +3,7 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace UnitTests\phpGPX\Parsers;
+namespace phpGPX\Tests\Parsers;
 
 use phpGPX\Models\GpxFile;
 use phpGPX\Models\Metadata;
@@ -20,7 +20,7 @@ class PersonParserTest extends AbstractParserTest
 	 */
 	protected $testModelInstance;
 
-	public static function createTestInstance()
+	public static function createTestInstance(): Person
 	{
 		$person = new Person();
 		$person->name = "Jakub Dubec";
@@ -31,7 +31,7 @@ class PersonParserTest extends AbstractParserTest
 		return $person;
 	}
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		parent::setUp();
 
@@ -68,7 +68,7 @@ class PersonParserTest extends AbstractParserTest
 	 * @param \DOMDocument $document
 	 * @return \DOMElement
 	 */
-	protected function convertToXML(\DOMDocument $document)
+	protected function convertToXML(\DOMDocument $document): \DOMElement
 	{
 		return PersonParser::toXML($this->testModelInstance, $document);
 	}

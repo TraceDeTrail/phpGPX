@@ -3,7 +3,7 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace UnitTests\phpGPX\Helpers;
+namespace phpGPX\Tests\Helpers;
 
 use phpGPX\Helpers\GeoHelper;
 use phpGPX\Models\Point;
@@ -29,11 +29,11 @@ class GeoHelperTest extends TestCase
 		$point2->latitude = 48.1644916381763;
 		$point2->longitude = 17.0591753907502;
 
-		$this->assertEquals(
+		$this->assertEqualsWithDelta(
 			856.97,
 			GeoHelper::getDistance($point1, $point2),
+			1,
 			"Invalid distance between two points!",
-			1
 		);
 	}
 }

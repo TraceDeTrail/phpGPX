@@ -3,11 +3,10 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace phpGPX\Tests\UnitTests\phpGPX\Parsers;
+namespace phpGPX\Tests\Parsers;
 
 use phpGPX\Models\Copyright;
 use phpGPX\Parsers\CopyrightParser;
-use UnitTests\phpGPX\Parsers\AbstractParserTest;
 
 class CopyrightParserTest extends AbstractParserTest
 {
@@ -30,7 +29,7 @@ class CopyrightParserTest extends AbstractParserTest
 		return $copyright;
 	}
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		parent::setUp();
 

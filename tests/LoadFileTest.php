@@ -14,7 +14,7 @@ class LoadFileTest extends TestCase
 		$gpx = new phpGpx();
 		$gpxFile = $gpx->load($file);
 
-		$this->assertEquals($this->createExpectedArray(), $gpxFile->toArray(), "", 0.0001);
+		$this->assertEqualsWithDelta($this->createExpectedArray(), $gpxFile->toArray(), 0.0001);
 
 		// Check XML generation
 		$gpxFile->toXML()->saveXML();

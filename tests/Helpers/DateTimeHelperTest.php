@@ -3,7 +3,7 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace UnitTests\phpGPX\Helpers;
+namespace phpGPX\Tests\Helpers;
 
 use phpGPX\Helpers\DateTimeHelper;
 use phpGPX\Models\Point;
@@ -64,11 +64,9 @@ class DateTimeHelperTest extends TestCase
 		);
 	}
 
-	/**
-	 * @expectedException \Exception
-	 */
 	public function testParseDateTimeInvalidInput()
 	{
+		$this->expectException(\Exception::class);
 		DateTimeHelper::parseDateTime("Invalid exception");
 	}
 }

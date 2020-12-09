@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.0 (WIP)
+
+Highlights:
+
+- Refactored library core
+- New more readable tests
+- New extensions parser
+- Dropped PHP 5 support
+
+- **Change**: Recreated test suite
+
 ## 1.0.1
 
 - **Fix**: Fixed PersonParser::toXML() if there are no links provided 

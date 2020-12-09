@@ -3,7 +3,7 @@
  * @author            Jakub Dubec <jakub.dubec@gmail.com>
  */
 
-namespace UnitTests\phpGPX\Parsers;
+namespace phpGPX\Tests\Parsers;
 
 use phpGPX\Models\Link;
 use phpGPX\Parsers\LinkParser;
@@ -21,7 +21,7 @@ class LinkParserTest extends AbstractParserTest
 	/**
 	 * @return Link
 	 */
-	public static function createTestInstance()
+	public static function createTestInstance(): Link
 	{
 		$link = new Link();
 		$link->href = "https://jakubdubec.me";
@@ -31,7 +31,7 @@ class LinkParserTest extends AbstractParserTest
 		return $link;
 	}
 
-	protected function setUp()
+	protected function setUp(): void
 	{
 		parent::setUp();
 
