@@ -45,9 +45,7 @@ abstract class PersonParser
 			$node->appendChild($child);
 		}
 
-		# TODO: is_iterable
-		if (!is_null($person->links))
-		{
+		if (!is_null($person->links)) {
 			foreach ($person->links as $link) {
 				$child = LinkParser::toXML($link, $document);
 				$node->appendChild($child);
