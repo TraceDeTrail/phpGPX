@@ -96,7 +96,7 @@ class Stats implements Summarizable
 	 * Serialize object to array
 	 * @return array
 	 */
-	public function toArray()
+	public function toArray(): array
 	{
 		return [
 			'distance' => (float)$this->distance,

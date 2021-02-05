@@ -37,7 +37,7 @@ class Track extends Collection
 	 * Return all points in collection.
 	 * @return Point[]
 	 */
-	public function getPoints()
+	public function getPoints(): array
 	{
 		/** @var Point[] $points */
 		$points = [];
@@ -57,7 +57,7 @@ class Track extends Collection
 	 * Serialize object to array
 	 * @return array
 	 */
-	public function toArray()
+	public function toArray(): array
 	{
 		return [
 			'name' => SerializationHelper::stringOrNull($this->name),

@@ -8,7 +8,6 @@
 
 namespace phpGPX\Helpers;
 
-use phpGPX\Helpers\GeoHelper;
 use phpGPX\Models\Point;
 use phpGPX\phpGPX;
 
@@ -18,7 +17,7 @@ class DistanceCalculator
 	 * @param Point[]|array $points
 	 * @return float
 	 */
-	public static function calculate(array $points)
+	public static function calculate(array $points): float
 	{
 		$distance = 0;
 

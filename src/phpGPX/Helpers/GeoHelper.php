@@ -24,7 +24,7 @@ abstract class GeoHelper
 	 * @param Point $point2
 	 * @return float
 	 */
-	public static function getDistance(Point $point1, Point $point2)
+	public static function getDistance(Point $point1, Point $point2): float
 	{
 		$latFrom = deg2rad($point1->latitude);
 		$lonFrom = deg2rad($point1->longitude);

@@ -18,9 +18,9 @@ class DateTimeHelper
 	/**
 	 * @param Point $point1
 	 * @param Point $point2
-	 * @return bool|int
+	 * @return bool
 	 */
-	public static function comparePointsByTimestamp(Point $point1, Point $point2)
+	public static function comparePointsByTimestamp(Point $point1, Point $point2): bool
 	{
 		if ($point1->time == $point2->time) {
 			return 0;
@@ -34,7 +34,7 @@ class DateTimeHelper
 	 * @param string $timezone
 	 * @return null|string
 	 */
-	public static function formatDateTime($datetime, $format = 'c', $timezone = 'UTC')
+	public static function formatDateTime($datetime, $format = 'c', $timezone = 'UTC'): ?string
 	{
 		$formatted 				= null;
 
@@ -50,8 +50,9 @@ class DateTimeHelper
 	 * @param $value
 	 * @param string $timezone
 	 * @return \DateTime
+	 * @throws \Exception
 	 */
-	public static function parseDateTime($value, $timezone = 'UTC')
+	public static function parseDateTime($value, $timezone = 'UTC'): \DateTime
 	{
 		$timezone = new \DateTimeZone($timezone);
 		$datetime = new \DateTime($value, $timezone);

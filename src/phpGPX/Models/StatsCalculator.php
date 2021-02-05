@@ -19,5 +19,5 @@ interface StatsCalculator
 	 * Return all points in collection.
 	 * @return Point[]
 	 */
-	public function getPoints();
+	public function getPoints(): array;
 }
