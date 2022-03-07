@@ -22,6 +22,22 @@ abstract class MetadataParser
 			'name' => 'name',
 			'type' => 'string'
 		],
+		'id' => [
+			'name' => 'id',
+			'type' => 'string'
+		],
+		'activity' => [
+			'name' => 'activity',
+			'type' => 'string'
+		],
+		'platform' => [
+			'name' => 'platform',
+			'type' => 'string'
+		],
+		'app_version' => [
+			'name' => 'app_version',
+			'type' => 'string'
+		],
 		'desc' => [
 			'name' => 'description',
 			'type' => 'string'
