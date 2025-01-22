@@ -72,7 +72,7 @@ abstract class ExtensionParser
 				}
 				else{
 					$child = $document->createElement($key, $tab[0]);
-					$child->setAttribute( $tab[1], $tab[2]);
+					$child->setAttributeNS( $tab[1], $tab[2]);
 				}
 				
 				$node->appendChild($child);
