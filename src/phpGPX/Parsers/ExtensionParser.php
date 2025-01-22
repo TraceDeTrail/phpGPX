@@ -67,7 +67,7 @@ abstract class ExtensionParser
 		if (!empty($extensions->unsupported)) {
 			foreach ($extensions->unsupported as $key => $value) {
 				$tab=explode('|',$value);
-				if(count($value)==1){
+				if(count($tab)==1){
 					$child = $document->createElement($key, $value);
 				}
 				else{
