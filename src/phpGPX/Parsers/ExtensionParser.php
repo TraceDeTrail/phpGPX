@@ -72,7 +72,7 @@ abstract class ExtensionParser
 				}
 				else{
 					$child = $document->createElement($key, $tab[0]);
-					$child->setAttributeNS( $tab[1], $tab[2]);
+					$child->setAttributeNS( "http://www.w3.org/2000/xmlns/",$tab[1], $tab[2]);
 				}
 				
 				$node->appendChild($child);
